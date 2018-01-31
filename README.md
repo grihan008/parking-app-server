@@ -11,9 +11,9 @@ All the errors are in the following form:
 ```
 
 ### API:
-POST: /api/signup
-Requires: login, password
-Returns:
+POST: /api/signup  
+Requires: login, password  
+Returns:  
 ```javascript
 user = {
   "login": "SomeLogin",
@@ -22,9 +22,9 @@ user = {
 }
 ```
 
-POST: /api/login
-Requires: login, password
-Returns:
+POST: /api/login  
+Requires: login, password  
+Returns:  
 ```javascript
 user = {
   "login": "SomeLogin",
@@ -33,9 +33,9 @@ user = {
 }
 ```
 
-POST: /api/updateuserpassword
-Requires: id, password, newpassword
-Returns:
+POST: /api/updateuserpassword  
+Requires: id, password, newpassword  
+Returns:  
 ```javascript
 user = {
   "login": "SomeLogin",
@@ -44,9 +44,9 @@ user = {
 }
 ```
 
-POST: /api/updateuserlogin
-Requires: id, login
-Returns:
+POST: /api/updateuserlogin  
+Requires: id, login  
+Returns:  
 ```javascript
 user = {
   "login": "SomeLogin",
