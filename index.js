@@ -106,7 +106,7 @@ var parkingPlaces = [{
   "description":"Really nice spot not far from shop !"
 }];
 
-app.get('parking-places', function(req,res){
+app.get('/api/parking-places', function(req,res){
 	res.status(200).json(parkingPlaces);
 });
 
