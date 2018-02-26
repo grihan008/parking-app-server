@@ -34,6 +34,8 @@ app.use(cors());
 
 //Temporary demo variables
 
+var myPlaces = [];
+
 var parkingPlaces = [{
   "id": 1,
   "address":"Isokatu 34",
@@ -108,6 +110,16 @@ var parkingPlaces = [{
 
 app.get('/api/parking-places', function(req,res){
 	res.status(200).json(parkingPlaces);
+});
+
+app.get('/api/add-place/:id'){
+	myPlaces.push(park.find(function(cur){
+		return cur.id = req.params.id;
+	}));
+};
+
+app.get('/api/my-places', function(req,res){
+	res.status(200).json(myPlaces);
 });
 
 var sess;
