@@ -113,7 +113,7 @@ app.get('/api/parking-places', function(req,res){
 });
 
 app.get('/api/add-place/:id',function(){
-	myPlaces.push(park.find(function(cur){
+	myPlaces.push(parkingPlaces.find(function(cur){
 		return cur.id = req.params.id;
 	}));
 });
