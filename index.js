@@ -112,11 +112,11 @@ app.get('/api/parking-places', function(req,res){
 	res.status(200).json(parkingPlaces);
 });
 
-app.get('/api/add-place/:id'){
+app.get('/api/add-place/:id',function(){
 	myPlaces.push(park.find(function(cur){
 		return cur.id = req.params.id;
 	}));
-};
+});
 
 app.get('/api/my-places', function(req,res){
 	res.status(200).json(myPlaces);
