@@ -34,7 +34,7 @@ app.use(cors());
 
 //Temporary demo variables
 
-var parking_places = [{
+var parkingPlaces = [{
   "id": 1,
   "address":"Isokatu 34",
   "type":"long-term",
@@ -106,8 +106,8 @@ var parking_places = [{
   "description":"Really nice spot not far from shop !"
 }];
 
-app.get('parking_places', function(req,res){
-	res.json(parking_places);
+app.get('parking-places', function(req,res){
+	res.status(200).json(parkingPlaces);
 });
 
 var sess;
