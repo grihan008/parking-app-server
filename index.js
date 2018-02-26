@@ -32,6 +32,84 @@ app.use(bodyParser.urlencoded({
 app.use(bodyParser.json());
 app.use(cors());
 
+//Temporary demo variables
+
+var parking_places = [{
+  "id": 1,
+  "address":"Isokatu 34",
+  "type":"long-term",
+  "price":0.50,
+  "start_date":"20.2.2018",
+  "end_date":"3.3.2018",
+  "start_time":"8:00",
+  "end_time":"16:00",
+  "username":"Damien",
+  "description":"Really nice spot not far from shop !"
+},
+{
+  "id": 2,
+  "address":"Jatulikivenkatu 18 A 1",
+  "type":"long-term",
+  "price":0.50,
+  "start_date":"20.2.2018",
+  "end_date":"3.3.2018",
+  "start_time":"8:00",
+  "end_time":"16:00",
+  "username":"Damien",
+  "description":"Really nice spot not far from shop !"
+},
+{
+  "id": 3,
+  "address":"Torikatu 10",
+  "type":"long-term",
+  "price":0.50,
+  "start_date":"20.2.2018",
+  "end_date":"3.3.2018",
+  "start_time":"8:00",
+  "end_time":"16:00",
+  "username":"Damien",
+  "description":"Really nice spot not far from shop !"
+},
+{
+  "id": 4,
+  "address":"Somekatu 36 B",
+  "type":"instant",
+  "price":1.50,
+  "start_date":"20.2.2018",
+  "end_date":"3.3.2018",
+  "start_time":"8:00",
+  "end_time":"16:00",
+  "username":"Damien",
+  "description":"Really nice spot not far from shop !"
+},
+{
+  "id": 5,
+  "address":"Another street 65 C",
+  "type":"instant", "price":1.50,
+  "start_date":"20.2.2018",
+  "end_date":"3.3.2018",
+  "start_time":"8:00",
+  "end_time":"16:00",
+  "username":"Damien",
+  "description":"Really nice spot not far from shop !"
+},
+{
+  "id": 6,
+  "address":"Third street 65 B",
+  "type":"instant",
+  "price":1.50,
+  "start_date":"20.2.2018",
+  "end_date":"3.3.2018",
+  "start_time":"8:00",
+  "end_time":"16:00",
+  "username":"Damien",
+  "description":"Really nice spot not far from shop !"
+}];
+
+app.get('parking_places', function(req,res){
+	res.json(parking_places);
+});
+
 var sess;
 var db;
 
