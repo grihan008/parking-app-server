@@ -129,6 +129,13 @@ app.get('/api/my-places', function(req,res){
 	res.status(200).json(myPlaces);
 });
 
+app.post('/api/add-new-place', function(req,res){
+	var newItem = req.body;
+	newItem.id = parkingPlaces.length;
+	parkingPlaces.push(newItem);
+	res.status(200).json({"result":"success"});
+});
+
 var sess;
 var db;
 
