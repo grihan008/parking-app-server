@@ -113,10 +113,16 @@ app.get('/api/parking-places', function(req,res){
 });
 
 app.get('/api/add-place/:id',function(req,res){
-	myPlaces.push(parkingPlaces.find(function(cur){
-		return cur.id == req.params.id;
-	}));
-	res.status(200).json({"result":"success"});
+	if (myPlaces.find(function(cur){
+		return cur.id = req.params.id;
+	})){
+		res.status(200).json({"result":"already-added"});
+	} else{
+		myPlaces.push(parkingPlaces.find(function(cur){
+			return cur.id == req.params.id;
+		}));
+		res.status(200).json({"result":"success"});
+	}
 });
 
 app.get('/api/my-places', function(req,res){
