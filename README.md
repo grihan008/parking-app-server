@@ -72,16 +72,16 @@ Returns the list of parking places:
 ```
 
 GET: /api/add-place/:id  
-Adds a parking place to myPlaces array
-Returns:
+Adds a parking place to myPlaces array   
+Returns:   
 ```javascript
 {
   "result": "success"
 }
 ```
 
-GET: /api/my-places
-Returns own parking places:
+GET: /api/my-places   
+Returns own parking places:   
 ```javascript
 [{
   "id": id,
@@ -97,9 +97,9 @@ Returns own parking places:
 },...]
 ```
 
-POST: /api/add-new-place
-Creates a new parking place
-Requires:
+POST: /api/add-new-place   
+Creates a new parking place   
+Requires:   
 ```javascript
 {
   "address":"Some Address",
@@ -113,7 +113,7 @@ Requires:
   "description":"Really nice spot not far from shop !"
 }
 ```
-Returns:
+Returns:   
 ```javascript
 {
   "result": "success"
